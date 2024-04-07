@@ -1,0 +1,3 @@
+Q8 : Find all products which contain the value of soft in product material 
+
+Query : db.products.find ( { "product_material" : "Soft" } , { _id : 0 } )
