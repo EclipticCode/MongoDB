@@ -1,3 +1,5 @@
 Find all the topics and tasks which are thought in the month of October
 
-Query : db.tasks.find( { } , {_id : 0} ) , db.topics.find( { } , { _id : 0})
+Query to find all the topis : db.tasks.find( { } , {_id : 0} ) 
+
+Query to find all the tasks : db.topics.find( { } , { _id : 0})
