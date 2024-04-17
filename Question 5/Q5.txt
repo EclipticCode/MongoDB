@@ -1,0 +1,3 @@
+Find all the mentors with who has the mentee's count more than 15
+
+Query : db.mentors.find({mentee_count : { $gt : 15}} , { _id : 0 , mentor_id : 0 })
