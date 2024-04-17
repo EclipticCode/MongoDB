@@ -1,0 +1,7 @@
+Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+Query : db.attendance.aggregate([ { $match : { attendance : "absent"} } , {$lookup : { from : "tasks" , localField : "user_id" , foreignField : "user_id" , as : "task" }}])
+
+
+If you're asking for the total number of users in count
+Query : db.attendance.aggregate([ { $match : { attendance : "absent"} } , {$lookup : { from : "tasks" , localField : "user_id" , foreignField : "user_id" , as : "task" }} , {$group : { Number_of_users : { $sum : 1 } } } ])
